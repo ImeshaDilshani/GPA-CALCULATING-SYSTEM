@@ -28,9 +28,6 @@ namespace GPA_CALCULATOR
         private int credit6;
         private int credit7;
         private int credit8;
-        
-        
-
         public Form1()
         {
             InitializeComponent();
@@ -101,9 +98,43 @@ namespace GPA_CALCULATOR
 
             double gpa = totalGradePoints / totalCredits;
 
-            MessageBox.Show("your GPA is" +" "+ gpa);
+            // Display the GPA
+            labelresults.Text = "Your GPA is " + gpa.ToString();
+
+         
 
 
+
+        }
+
+        private void resetbtn_Click(object sender, EventArgs e)
+        {
+            // Clear the grade textboxes
+            txtGrade1.Text = "";
+            txtGrade2.Text = "";
+            txtGrade3.Text = "";
+            txtGrade4.Text = "";
+            txtGrade5.Text = "";
+            txtGrade6.Text = "";
+            txtGrade7.Text = "";
+            txtGrade8.Text = "";
+
+            // Reset the NumericUpDown controls for credits
+            numericUpDownCredit1.Value = 0;
+            numericUpDownCredit2.Value = 0;
+            numericUpDownCredit3.Value = 0;
+            numericUpDownCredit4.Value = 0;
+            numericUpDownCredit5.Value = 0;
+            numericUpDownCredit6.Value = 0;
+            numericUpDownCredit7.Value = 0;
+            numericUpDownCredit8.Value = 0;
+
+            // Clear the GPA result label
+            labelresults.Text = "Your GPA is ";
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }
